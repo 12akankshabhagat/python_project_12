@@ -1,0 +1,26 @@
+html
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>YouTube and Amazon Scraping</title>
+       <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+   </head>
+   <body>
+       <h1>YouTube Videos</h1>
+       <ul>
+           {% for title in youtube_data %}
+               <li>{{ title }}</li>
+           {% endfor %}
+       </ul>
+
+       <h1>Amazon Products</h1>
+       <ul>
+           {% for product in amazon_data %}
+               <li>{{ product }}</li>
+           {% endfor %}
+       </ul>
+   </body>
+   </html>
+   
